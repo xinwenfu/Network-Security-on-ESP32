@@ -1,4 +1,4 @@
-# Network Security on ESP32
+# Network Security on ESP32 through Amazon AWS IoT
 
 In this project, students will connect their IoT kit to AWS IoT and use AWS IoT’s MQTT test client to check if the IoT kit can send messages to AWS IoT.
 
