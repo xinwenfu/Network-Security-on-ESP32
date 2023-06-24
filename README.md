@@ -25,9 +25,7 @@ Please visit [Create AWS IoT resources](https://docs.aws.amazon.com/iot/latest/d
 ## Download esp-aws-iot
 Please visit [espressif/esp-aws-iot](https://github.com/espressif/esp-aws-iot). To use esp-aws-iot, we just need to open a terminal in the Ubuntu IoT VM and run the following commands to download the library and examples. 
 -	cd /home/iot/esp
--	git clone --recursive https://github.com/espressif/esp-aws-iot
-- cd esp-aws-iot
-- git switch 
+-	git clone -b release/v3.1.x --recursive https://github.com/espressif/esp-aws-iot
 
 ## Configure esp-aws-iot
 Please visit [Amazon Web Services IoT Examples](https://github.com/espressif/esp-aws-iot/tree/release/v3.1.x/examples). The student will work on the subscribe_publish example. Read Configuring Your Device carefully and use Option 1: Embedded Key & Cert into App Binary. 
