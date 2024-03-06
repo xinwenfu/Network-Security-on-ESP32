@@ -15,18 +15,20 @@ Another important concept is the policy, which specifies who can use the custom 
 -	*iot:Receive*: permission to receive a message from AWS IoT Core.
 -	*iot:Subscribe*: permission to subscribe to a topic filter.
 
-## Create AWS account
+## 1. Create AWS account
 Please visit [Set up your AWS account](https://docs.aws.amazon.com/iot/latest/developerguide/setting-up.html) to create your AWS account. Please visit [AWS account root user credentials and IAM user credentials](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html) to see the difference between root user and IAM user. The root user can be used for this project to log into AWS console. 
 
-## Create AWS IoT policy and Object
+## 2. Create AWS IoT policy and Object
 Please visit [Create AWS IoT resources](https://docs.aws.amazon.com/iot/latest/developerguide/create-iot-resources.html) and follow steps in this article.
--	Create an AWS IoT policy. Please provide screenshot of the created policy. (1 point)
--	Create a thing object. Please provide a screenshot of the listed keys and certificate which you can download. (1 point)
-  -	Be sure to download the keys and certificate.
+-	Create an AWS IoT policy
+-	Create a thing object
+  -	Be sure to download the key and certificate for the thing.
   -	You do not need to download the root CA file since we will have it from an example project.
 
-## Download esp-aws-iot
-Please visit [espressif/esp-aws-iot](https://github.com/espressif/esp-aws-iot). To use esp-aws-iot, we just need to open a terminal in the Ubuntu IoT VM and run the following commands to download the library and examples. 
+## 3. (Optional) Download esp-aws-iot
+The project is already available at */home/iot/esp/IoT-Examples/espidf-aws-iot*.
+
+If needed, please visit [espressif/esp-aws-iot](https://github.com/espressif/esp-aws-iot). To use esp-aws-iot, we just need to open a terminal in the Ubuntu IoT VM and run the following commands to download the library and examples. 
 -	cd /home/iot/esp
 -	git clone -b release/v3.1.x --recursive https://github.com/espressif/esp-aws-iot
 
