@@ -6,8 +6,7 @@ Please visit [AWS Free Tier](https://aws.amazon.com/free/?all-free-tier.sort-by=
 
 When you get into your AWS IoT portal as shown below, click the *Setting* at the bottom left and you shall find your custom *Endpoint*, which works as a message broker/server. You can publish and subscribe to topics through your custom endpoint/broker. AWS IoT uses mutual authentication. In this project, Amazon will be a certificate authority (CA), create a public and privacy key pair and issue a certificate for our IoT kit, which also need Amazon’s CA certificate to authenticate the custom endpoint/broker. AWS IoT will keep the IoT kit’s certificate for the purpose of authenticating the IoT kit (called client too).
 
-<img src="https://github.com/xinwenfu/Network-Security-on-ESP32/assets/69218457/7a1b9fb7-56a4-487a-949e-32992fb1670f" width=720>
-
+<img src="https://github.com/xinwenfu/Network-Security-on-ESP32/assets/69218457/d0fceb5b-3e8a-48f6-b303-40534b515c18" width=1080>
 
 Another important concept is the policy, which specifies who can use the custom endpoint for what. Please visit [AWS IoT Core policies](https://docs.aws.amazon.com/iot/latest/developerguide/iot-policies.html). Below are MQTT Policy Actions.
 -	*iot:Connect*: permission to connect to the AWS IoT Core message broker.
@@ -35,14 +34,14 @@ If needed, please visit [espressif/esp-aws-iot](https://github.com/espressif/esp
 ## Configure esp-aws-iot
 Please visit [Amazon Web Services IoT Examples](https://github.com/espressif/esp-aws-iot/tree/release/v3.1.x/examples). The student will work on the subscribe_publish example. Read Configuring Your Device carefully and use Option 1: Embedded Key & Cert into App Binary. 
 
-Read *Installing Private Key & Certificate* at [Amazon Web Services IoT Examples](https://github.com/espressif/esp-aws-iot/tree/release/v3.1.x/examples) carefully. Rename the downloaded private key and certificate accordingly and copy them to the appropriate folder of the subscribe_publish example downloaded to the Ubuntu IoT VM. 
+- Read *Installing Private Key & Certificate* at [Amazon Web Services IoT Examples](https://github.com/espressif/esp-aws-iot/tree/release/v3.1.x/examples) carefully. Rename the downloaded private key and certificate accordingly and copy them to the appropriate folder of the subscribe_publish example downloaded to the Ubuntu IoT VM. 
 
-Read *Find & Set AWS Endpoint Hostname* carefully. In this assignment, please use VS Code to configure the AWS endpoint hostname. That is, a student shall open the subscribe_publish example with VS Code and perform the configuration. Copy and paste your custom endpoint below. (1 point)
+- Read *Find & Set AWS Endpoint Hostname* carefully. In this project, please use VS Code to configure the AWS endpoint hostname. That is, a student shall open the subscribe_publish example with VS Code and perform the configuration.
 
-The subscribe_publish example requires the configuration of WiFi so that the IoT kit can connect to the Internet and AWS IoT. 
+- The subscribe_publish example requires the configuration of WiFi so that the IoT kit can connect to the Internet and AWS IoT. 
 
 ## Test esp-aws-iot
-Please read [Amazon Web Services IoT MQTT Subscribe/Publish Example](https://github.com/espressif/esp-aws-iot/tree/release/v3.1.x/examples/subscribe_publish) carefully. Note: the MQTT test client is located within Test at the bottom left of AWS IoT portal. For the use of the MQTT test client, please also visit [View MQTT messages with the AWS IoT MQTT client](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html). 
+Please read [Amazon Web Services IoT MQTT Subscribe/Publish Example](https://github.com/espressif/esp-aws-iot/tree/release/v3.1.x/examples/subscribe_publish) carefully. The *MQTT test client* is located within Test at the bottom left of AWS IoT portal. For the use of the MQTT test client, please also visit [View MQTT messages with the AWS IoT MQTT client](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html). 
 
 ## Security analysis of esp-aws-iot
 Please dump your IoT kit’s flash with esptool.py and search the flash for the private key of the IoT kit. The security implication is the private key of the IoT kit can be stolen from the dumped flash. Our IoT kit contains a crypto co-processor ATECC608A, which has an internal secure storage and hardware crypto acceleration. ATECC608A can be used to hold the private key, which cannot be extracted from outside of ATECC608A and does not leave the secure storage. All necessary crypto operations are done inside of ATECC608A. Therefore, the private key of the IoT kit can be protected. (1 point)
