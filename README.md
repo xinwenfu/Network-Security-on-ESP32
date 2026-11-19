@@ -44,6 +44,9 @@ Please visit [Amazon Web Services IoT Examples](https://github.com/espressif/esp
 
 - The subscribe_publish example requires the configuration of WiFi so that the IoT kit can connect to the Internet and AWS IoT. 
 
+<img width="1843" height="897" alt="image" src="https://github.com/user-attachments/assets/0d9508fb-ad52-4f8c-8787-afd86e80b299" />
+
+
 ## 5. Test esp-aws-iot
 Please read [Amazon Web Services IoT MQTT Subscribe/Publish Example](https://github.com/espressif/esp-aws-iot/tree/release/v3.1.x/examples/subscribe_publish) carefully. The *MQTT test client* is located within Test at the left of AWS IoT portal. For the use of the MQTT test client, please also visit [View MQTT messages with the AWS IoT MQTT client](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html). 
 
