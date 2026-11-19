@@ -21,6 +21,9 @@ Please visit [Set up your AWS account](https://docs.aws.amazon.com/iot/latest/de
 ## 2. Create AWS IoT policy and Object
 Please visit [Create AWS IoT resources](https://docs.aws.amazon.com/iot/latest/developerguide/create-iot-resources.html) and follow steps in this article.
 -	Create an AWS IoT policy
+
+<img width="1918" height="907" alt="image" src="https://github.com/user-attachments/assets/da0cf0f5-5f2e-410d-8872-93f7ed9455f9" />
+  
 -	Create a thing object
   -	Be sure to download the key and certificate for the thing.
   -	You do not need to download the root CA file since we will have it from an example project.
