@@ -6,7 +6,8 @@ Please visit [AWS Free Tier](https://aws.amazon.com/free/?all-free-tier.sort-by=
 
 When you get into your AWS IoT portal as shown below, click the *Setting* at the bottom left and you shall find your custom *Endpoint*, which works as a message broker/server. You can publish and subscribe to topics through your custom endpoint/broker. AWS IoT uses mutual authentication. In this project, Amazon will be a certificate authority (CA), create a public and privacy key pair and issue a certificate for our IoT kit, which also need Amazon’s CA certificate to authenticate the custom endpoint/broker. AWS IoT will keep the IoT kit’s certificate for the purpose of authenticating the IoT kit (called client too).
 
-<img src="https://github.com/xinwenfu/Network-Security-on-ESP32/assets/69218457/d0fceb5b-3e8a-48f6-b303-40534b515c18" width=1080>
+<img width="1917" height="902" alt="image" src="https://github.com/user-attachments/assets/b69125fa-f769-4214-8e8b-906b6d8188c7" />
+
 
 Another important concept is the policy, which specifies who can use the custom endpoint for what. Please visit [AWS IoT Core policies](https://docs.aws.amazon.com/iot/latest/developerguide/iot-policies.html). Below are MQTT Policy Actions.
 -	*iot:Connect*: permission to connect to the AWS IoT Core message broker.
