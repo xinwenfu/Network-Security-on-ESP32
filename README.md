@@ -45,12 +45,12 @@ Please visit [Amazon Web Services IoT Examples](https://github.com/espressif/esp
 Please read [Amazon Web Services IoT MQTT Subscribe/Publish Example](https://github.com/espressif/esp-aws-iot/tree/release/v3.1.x/examples/subscribe_publish) carefully. The *MQTT test client* is located within Test at the left of AWS IoT portal. For the use of the MQTT test client, please also visit [View MQTT messages with the AWS IoT MQTT client](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html). 
 
 
-## 6. Create DynamoDB table and AWS IoT rule 
+## 6. (Optional) Create DynamoDB table and AWS IoT rule 
 Please read carefully [Store device data in a DynamoDB table](https://docs.aws.amazon.com/iot/latest/developerguide/iot-ddb-rule.html). We will save AHT readings sent from our IoT kit into a DynamoDB table. Note our AHT sensor has two readings: temperature and humidity.
 - Create a DynamoDB table
 - Create an AWS IoT rule that forwards the AHT sensor data into the DynamoDB table. 
 
-## 7. Save DHT22 Data into DynamoDB of AWS
+## 7. (Optional) Save DHT22 Data into DynamoDB of AWS
 Please read [Get started with ESP32 via VS Code and the ESP-IDF extension](https://github.com/xinwenfu/tst-dht-lab--pcb-2) and understand how to read the AHT sensor data.
 Carefully read *subscribe_publish_sample.c* of this project and find where data is sent to AWS IoT. 
 Merge the code of reading data from the AHT sensor into this project so that the AHT sensor data can be sent to AWS IoT.
