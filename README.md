@@ -51,8 +51,6 @@ Please visit [Amazon Web Services IoT Examples](https://github.com/espressif/esp
 ## 5. Test esp-aws-iot
 Please read [Amazon Web Services IoT MQTT Subscribe/Publish Example](https://github.com/espressif/esp-aws-iot/tree/release/v3.1.x/examples/subscribe_publish) carefully. The *MQTT test client* is located within Test at the left of AWS IoT portal. For the use of the MQTT test client, please also visit [View MQTT messages with the AWS IoT MQTT client](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html). 
 
-<img width="1846" height="896" alt="image" src="https://github.com/user-attachments/assets/36e024bc-69a4-4c2c-bc80-732ee7efb524" />
-
 ## 6. (Optional) Create DynamoDB table and AWS IoT rule 
 Please read carefully [Store device data in a DynamoDB table](https://docs.aws.amazon.com/iot/latest/developerguide/iot-ddb-rule.html). We will save AHT readings sent from our IoT kit into a DynamoDB table. Note our AHT sensor has two readings: temperature and humidity.
 - Create a DynamoDB table
@@ -67,6 +65,7 @@ The AHT reading has to be formatted in the JSON format in C so that it can work 
 ```
 sprintf(cPayload, "{\"temperature\": 28, \"humidity\": 80}");
 ```
+<img width="1846" height="896" alt="image" src="https://github.com/user-attachments/assets/36e024bc-69a4-4c2c-bc80-732ee7efb524" />
 
 ## 8. (Optional) Security analysis of esp-aws-iot
 Please dump your IoT kit’s flash with esptool.py and search the flash for the private key of the IoT kit. The security implication is the private key of the IoT kit can be stolen from the dumped flash. Our IoT kit contains a crypto co-processor ATECC608A, which has an internal secure storage and hardware crypto acceleration. ATECC608A can be used to hold the private key, which cannot be extracted from outside of ATECC608A and does not leave the secure storage. All necessary crypto operations are done inside of ATECC608A. Therefore, the private key of the IoT kit can be protected.
