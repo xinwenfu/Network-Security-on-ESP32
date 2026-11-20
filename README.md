@@ -56,7 +56,7 @@ Please read carefully [Store device data in a DynamoDB table](https://docs.aws.a
 - Create a DynamoDB table
 - Create an AWS IoT rule that forwards the AHT sensor data into the DynamoDB table. 
 
-## 7. (Optional) Save DHT22 Data into DynamoDB of AWS
+## 7. (Optional) Save Sensor Data into DynamoDB of AWS
 Please read [Get started with ESP32 via VS Code and the ESP-IDF extension](https://github.com/xinwenfu/tst-dht-lab--pcb-2) and understand how to read the AHT sensor data.
 Carefully read *subscribe_publish_sample.c* of this project and find where data is sent to AWS IoT. 
 Merge the code of reading data from the AHT sensor into this project so that the AHT sensor data can be sent to AWS IoT.
