@@ -42,11 +42,9 @@ Please visit [Amazon Web Services IoT Examples](https://github.com/espressif/esp
 
 - Read *Find & Set AWS Endpoint Hostname* carefully. In this project, please use VS Code to configure the **AWS endpoint hostname**. That is, a student shall open the subscribe_publish example with VS Code and perform the configuration.
 
-- The subscribe_publish example requires the configuration of **WiFi** so that the IoT kit can connect to the Internet and AWS IoT. 
-
 <img width="1843" height="899" alt="image" src="https://github.com/user-attachments/assets/185d1e36-7720-4f9c-8e6e-ebf17918786c" />
 
-
+- The subscribe_publish example requires the configuration of **WiFi** so that the IoT kit can connect to the Internet and AWS IoT. 
 
 ## 5. Test esp-aws-iot
 Please read [Amazon Web Services IoT MQTT Subscribe/Publish Example](https://github.com/espressif/esp-aws-iot/tree/release/v3.1.x/examples/subscribe_publish) carefully. The *MQTT test client* is located within Test at the left of AWS IoT portal. For the use of the MQTT test client, please also visit [View MQTT messages with the AWS IoT MQTT client](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html). 
