@@ -16,7 +16,7 @@ Another important concept is the policy, which specifies who can use the custom 
 -	*iot:Subscribe*: permission to subscribe to a topic filter.
 
 ## 1. Create AWS account
-Please visit [Set up your AWS account](https://docs.aws.amazon.com/iot/latest/developerguide/setting-up.html) to create your AWS account. Please visit [AWS account root user credentials and IAM user credentials](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html) to see the difference between root user and IAM user. The root user can be used for this project to log into AWS console. 
+Please visit [Set up your AWS account](https://docs.aws.amazon.com/iot/latest/developerguide/setting-up.html) to create your AWS account. Please visit [AWS account root user credentials and IAM user credentials](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html) to see the difference between root user and IAM user. **The root user can be used for this project to log into AWS console.**
 
 ## 2. Create AWS IoT policy and Object
 Please visit [Create AWS IoT resources](https://docs.aws.amazon.com/iot/latest/developerguide/create-iot-resources.html) and follow steps in this article.
